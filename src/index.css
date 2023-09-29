@@ -1,0 +1,16 @@
+@tailwind base;
+
+body {
+    overflow-x: hidden
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.hideSidebar {
+    transform: translateX(100%);
+}
+
+.showSidebar {
+    transform: translateX(0%);
+}
