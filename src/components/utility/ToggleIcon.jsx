@@ -38,7 +38,7 @@ const ToggleIcon = ({ list, value }) => {
       {list.length > 0 && (
         <ul
           className={`bg-white border-b-2 shadow-sm shadow-black rounded-lg text-black absolute top-12 py-3 px-6 text-md font-medium flex flex-col space-y-2  transition-all duration-300 ${
-            btnOn ? "opacity-[1]" : "opacity-[0]"
+            btnOn ? "opacity-[1]" : "opacity-[0] hidden"
           }`}
         >
           {list.map((item, index) => (

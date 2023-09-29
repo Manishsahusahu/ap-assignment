@@ -16,11 +16,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex bg-red-600 h-11 w-full items-center justify-center ">
+      <div className="flex bg-red-600 h-11 w-full items-center justify-center">
         <div className="relative nav flex items-center justify-between text-white w-[95%] text-sm font-medium">
           <div className="flex justify-between space-x-4">
             <img className="w-[31px]" src={logo} alt="logo" />
-            <ul className="hidden menu md:flex items-center justify-center cursor-pointer space-x-4">
+            <ul className="hidden menu md:flex items-center justify-center cursor-pointer space-x-4 z-10">
               <li>Home</li>
               <li>
                 <ToggleIcon value={"Live Sessions"} list={sessionsArray} />
@@ -36,10 +36,10 @@ const Navbar = () => {
             </ul>
           </div>
           <ul className="relative menu space-x-5 flex items-center justify-center cursor-pointer ">
-            {/* <li className="md:hidden border-2 py-[0.13rem] px-1 rounded-md">
+            <li className="md:hidden border-2 py-[0.13rem] px-1 rounded-md z-10">
               Donate
             </li>
-            <li>
+            <li className="z-10">
               <ToggleIcon
                 list={langArray}
                 value={
@@ -49,9 +49,9 @@ const Navbar = () => {
                 }
               />
             </li>
-            <li className="hidden lg:block">
+            <li className="hidden lg:block  z-10">
               <BsTelephone className="text-xl" />{" "}
-            </li> */}
+            </li>
             <li className="relative">
               <Sidebar />
             </li>
