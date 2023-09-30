@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Main page components/Header";
 import { getPageData } from "../../api call/getPageData";
+import VideoSeries from "../Main page components/VideoSeries";
 
 const MainPage = () => {
-
-    const [courseDetails, setCourseDetails] = useState(null)
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const runFunction = async () => {
       const result = await getPageData();
       console.log(result);
-      setCourseDetails(result.details);
+      setData(result);
     };
     runFunction();
   }, []);
 
   return (
-    <div>
-      <Header courseDetails= {courseDetails} />
+    <div className="relative">
+      {data && (
+        <div>
+          <Header courseDetails={data.details} />
+          <VideoSeries courses={data.courses} />
+        </div>
+      )}
     </div>
   );
 };

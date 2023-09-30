@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex bg-red-600 h-11 w-full items-center justify-center">
-        <div className="relative nav flex items-center justify-between text-white w-[95%] text-sm font-medium">
+        <div className="relative nav flex items-center justify-between text-white w-[89%] md:w-[95%]  text-sm font-medium">
           <div className="flex justify-between space-x-4">
             <img className="w-[31px]" src={logo} alt="logo" />
             <ul className="hidden menu md:flex items-center justify-center cursor-pointer space-x-4 z-10">
