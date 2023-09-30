@@ -5,7 +5,8 @@ import { BiSolidDownArrow } from "react-icons/Bi";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center justify-center space-x-3 px-4 h-[3rem] border-b-2">
+    <div className="flex justify-center items-center border-b-2 h-[3rem] ">
+    <div className="w-[95%] flex items-center justify-center space-x-3 ">
       <div className="flex items-center justify-center mr-auto space-x-6">
         <img src={image} width={100} alt="" />
 
@@ -29,7 +30,7 @@ const SearchBar = () => {
       <div className="button bg-red-500 px-2 py-[2px] rounded-md text-white">
         My Video Series
       </div>
-    </div>
+    </div></div>
   );
 };
 
