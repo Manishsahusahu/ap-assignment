@@ -24,7 +24,7 @@ const VideoSeries = ({ courses }) => {
               className="course flex flex-col w-[100%] md:w-[45%] xl:w-[30%] border-b-2 xl:mr-10 md:p-5 py-5 pr-5 hover:bg-slate-100 rounded-lg mb-5"
               key={index}
             >
-              <div className=" bhaagNum inline-flex items-center">
+              <div className=" bhaagNum inline-flex items-center mb-3">
                 <BsFillBookmarkFill
                   size={45}
                   className="-rotate-90 text-gray-400"
