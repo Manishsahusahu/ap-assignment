@@ -4,6 +4,7 @@ import Notification from "./components/core/Notification";
 import SearchBar from "./components/core/SearchBar";
 import NavPath from "./components/core/NavPath";
 import MainPage from "./components/core/MainPage";
+import Footer from "./components/core/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <SearchBar/>
       <NavPath/>
       <MainPage/>
+      <Footer/>
     </div>
   );
 };

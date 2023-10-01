@@ -30,8 +30,8 @@ const Header = ({ courseDetails }) => {
           </div>
         </div>
         <div className="socialMedia mt-3 hidden md:block">
-          <p className=" text-gray-600 text-base">Share this series:</p>
-          <div className="links flex text-4xl space-x-6">
+          <p className=" text-gray-600 text-sm">Share this series:</p>
+          <div className="links flex text-4xl space-x-6 mt-3">
             <BiLogoFacebook className="text-cyan-700"/>
             <BiLogoTwitter className="text-purple-500"/>
             <BiLogoWhatsapp className="text-red-500"/>
