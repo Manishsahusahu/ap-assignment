@@ -5,6 +5,7 @@ import SearchBar from "./components/core/SearchBar";
 import NavPath from "./components/core/NavPath";
 import MainPage from "./components/core/MainPage";
 import Footer from "./components/core/Footer";
+import OpenInApp from "./components/core/OpenInApp";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <NavPath/>
       <MainPage/>
       <Footer/>
+      <OpenInApp/>
     </div>
   );
 };
