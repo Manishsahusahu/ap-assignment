@@ -1,6 +1,6 @@
 # AP assignment
 
-This project is a assignment of acharya prashant organisation for a React application created using Vite.
+This project is an assignment of acharya prashant organisation for a React application created using Vite.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ To set up this project, follow these steps:
 2. Navigate to the project directory:
 
 ```bash
-cd react-vite-boilerplate
+cd ap-assignment
 
 ```
 
