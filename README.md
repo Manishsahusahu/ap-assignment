@@ -1,6 +1,6 @@
-# React Project with Vite
+# AP assignment
 
-This project is a boilerplate for a React application created using Vite.
+This project is a assignment of acharya prashant organisation for a React application created using Vite.
 
 ## Table of Contents
 
@@ -10,8 +10,6 @@ This project is a boilerplate for a React application created using Vite.
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Available Scripts](#available-scripts)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -28,26 +26,36 @@ To set up this project, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/react-vite-boilerplate.git
+   git clone https://github.com/Manishsahusahu/ap-assignment.git
 
    ```
 
 2. Navigate to the project directory:
 
-```cd react-vite-boilerplate
+```bash
+cd react-vite-boilerplate
 
 ```
 
 3. Install the project dependencies:
 
-```npm install
+```bash
+npm install
 
 ```
 
-### Usage
+## Usage
 
 After installing the dependencies, you can start the development server:
 
-```npm run dev
+```bash
+npm run dev
 
 ```
+
+## Available Scripts
+In the project directory, you can run the following npm scripts:
+
+`npm run dev`: Starts the development server.
+`npm run build`: Builds the production-ready application for deployment.
+`npm run serve`: Serves the production build locally for testing.
