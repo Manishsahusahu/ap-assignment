@@ -29,19 +29,17 @@ const FAQs = ({ faqdata }) => {
           {faqdata &&
             faqdata.map((item, index) => (
               <li
+                onClick={() => handleClick(index)}
                 key={index}
                 className={`py-5 ${
                   faqdata.length - 1 !== index ? "border-b-[1.5px]" : ""
-                } `}
+                } cursor-pointer`}
               >
                 <div>
                   <div>
-                    <div
-                      className="flex cursor-pointer items-center justify-between"
-                      onClick={() => handleClick(index)}
-                    >
+                    <div className="flex cursor-pointer items-center justify-between">
                       <div
-                        className="question font-semibold text-[#475569]"
+                        className="question font-semibold text-[#475569] w-[91%]"
                         dangerouslySetInnerHTML={{ __html: item.question }}
                       />
                       <IoIosArrowDown />

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/Rx";
+import MobileSidebar from "./MobileSidebar";
 
 const Sidebar = () => {
   const [sidebarOn, setSidebarOn] = useState(false);
+  const [mobileSidebar, setMobileSidebar] = useState(false);
 
   const handleClickAnywhere = (e) => {
     if (!e.target.closest(".sidebar") && sidebarOn) setSidebarOn(false);
   };
   useEffect(() => {
     document.addEventListener("click", handleClickAnywhere);
+    setMobileSidebar(window.innerWidth < 768);
     return () => {
       document.removeEventListener("click", handleClickAnywhere);
     };
@@ -18,7 +21,7 @@ const Sidebar = () => {
     <>
       <div
         className={`overlay cursor-auto bg- h-[400vh] w-[400vw] bg-[rgba(0,0,0,0.5)] -left-[100rem] -top-3 fixed
-        ${sidebarOn ? "opacity-100 z-20" : "opacity-0 z-0"} 
+        ${sidebarOn && !mobileSidebar ? "opacity-100 z-20" : "opacity-0 z-0"} 
         transition-all duration-700 `}
       ></div>
       <div className="relative sidebar">
@@ -32,7 +35,7 @@ const Sidebar = () => {
 
         <div
           className={`absolute overflow-y-scroll bg-white text-black w-[35vw] lg:w-[28vw]  z-30 -top-3 -right-[3rem]  lg:-right-[3rem]
-        ${sidebarOn ? "" : "hideSidebar"} 
+        ${sidebarOn && !mobileSidebar ? "" : "hideSidebar"} 
     transition-all duration-700`}
         >
           <div className=" pt-9 pl-6 pr-10">
@@ -97,6 +100,9 @@ const Sidebar = () => {
           <div className="button bg-gray-100 flex items-center justify-center py-2 text-red-500">
             Logout
           </div>
+        </div>
+        <div className={`${sidebarOn && mobileSidebar ? "" : "hidden"}`}>
+          <MobileSidebar setSidebarOn={setSidebarOn} />
         </div>
       </div>
     </>
