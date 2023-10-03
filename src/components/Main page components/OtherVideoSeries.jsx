@@ -9,7 +9,7 @@ const OtherVideoSeries = ({ courses }) => {
   };
 
   return (
-    <div className="flex items-center justify-center my-5">
+    <div className="flex items-center justify-center mt-5">
       <div className="w-[89%] md:w-[95%] flex flex-col">
         <div className="heading border-b-[1px] w-[100%] pb-3">
           <h2 className="text-[1.1rem] font-medium">
@@ -44,7 +44,7 @@ const OtherVideoSeries = ({ courses }) => {
               return (
                 <div
                   key={index}
-                  className="course flex w-[100%] md:w-[47%] py-5 hover:bg-slate-100 space-x-4 border-b-[1px] mb-4"
+                  className="course flex w-[100%] md:w-[47%] py-5 hover:bg-slate-100 space-x-4 border-b-[1px]"
                 >
                   <div className="leftPart w-[35%]">
                     <img

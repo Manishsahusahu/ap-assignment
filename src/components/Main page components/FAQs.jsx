@@ -1,55 +1,7 @@
 import React, { useState } from "react";
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-
-
-const Accordion = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-  }));
-  
-  const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    backgroundColor:
-      theme.palette.mode === 'dark'
-        ? 'rgba(255, 255, 255, .05)'
-        : 'rgba(0, 0, 0, .03)',
-    flexDirection: 'row-reverse',
-    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-      transform: 'rotate(90deg)',
-    },
-    '& .MuiAccordionSummary-content': {
-      marginLeft: theme.spacing(1),
-    },
-  }));
-  
-  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
-  }));
+import { IoIosArrowDown } from "react-icons/io";
 
 const FAQs = ({ faqdata }) => {
-    // const [expanded, setExpanded] = useState('panel1');
-  
-    // const handleChange = (panel) => (event, newExpanded) => {
-    //   setExpanded(newExpanded ? panel : false);}
-
-
   const [expanded, setExpanded] = useState(false);
   const [expandId, setExpandId] = useState(null);
 
@@ -64,45 +16,57 @@ const FAQs = ({ faqdata }) => {
   };
 
   return (
-    <div className="flex items-center justify-center my-5">
-      <div className="w-[89%] md:w-[95%] flex flex-col md:flex-row">
-        <div className="left">
-          <div className="heading">FAQs</div>
+    <div className="flex items-center justify-center pt-10 pb-10 bg-slate-50">
+      <div className="w-[89%] md:w-[95%] flex flex-col md:flex-row justify-between lg:justify-evenly ">
+        <div className="left md:w-[23%] py-3">
+          <div className="heading font-semibold text-xl">FAQs</div>
           <p>
             Can’t find the answer you’re looking for? Reach out to our support
             team
           </p>
         </div>
-        <ul>
+        <ul className="md:w-[60%]">
           {faqdata &&
             faqdata.map((item, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className={`py-5 ${
+                  faqdata.length - 1 !== index ? "border-b-[1.5px]" : ""
+                } `}
+              >
                 <div>
                   <div>
                     <div
-                      className="question z-10"
-                      dangerouslySetInnerHTML={{ __html: item.question }}
-                    />
-                    <div className="button" onClick={() => handleClick(index)}>
-                      click
+                      className="flex cursor-pointer items-center justify-between"
+                      onClick={() => handleClick(index)}
+                    >
+                      <div
+                        className="question font-semibold text-[#475569]"
+                        dangerouslySetInnerHTML={{ __html: item.question }}
+                      />
+                      <IoIosArrowDown />
                     </div>
                   </div>
                   <div
                     className={`${
                       expanded && expandId === index
-                        ? "answer max-h-[3rem]"
-                        : "h-[0px] text-white"
-                    } transition-all duration-200`}
-                    dangerouslySetInnerHTML={{ __html: item.answer }}
-                  />
+                        ? "answer h-auto py-4"
+                        : "h-[0px]"
+                    } transition-all duration-300`}
+                  >
+                    <div
+                      className={`${
+                        expanded && expandId === index ? "" : " opacity-0"
+                      } transition-all duration-[1000] text-[#475569]`}
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    />
+                  </div>
                 </div>
               </li>
             ))}
         </ul>
       </div>
-      
     </div>
-
 
     // <div>
     //   <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
