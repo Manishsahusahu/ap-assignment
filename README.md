@@ -8,7 +8,6 @@ This project is an assignment of acharya prashant organisation for a React appli
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Available Scripts](#available-scripts)
 
 ## Getting Started
@@ -53,9 +52,10 @@ npm run dev
 
 ```
 
+Copy and paste the link displayed in the terminal to run the development version of this React app.
+
 ## Available Scripts
 In the project directory, you can run the following npm scripts:
 
 `npm run dev`: Starts the development server.
 `npm run build`: Builds the production-ready application for deployment.
-`npm run serve`: Serves the production build locally for testing.
