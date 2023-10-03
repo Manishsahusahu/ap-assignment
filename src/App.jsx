@@ -17,6 +17,8 @@ const App = () => {
       <MainPage/>
       <Footer/>
       <OpenInApp/>
+
+
     </div>
   );
 };

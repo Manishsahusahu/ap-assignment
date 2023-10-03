@@ -4,7 +4,6 @@ import { BsFillBookmarkFill } from "react-icons/Bs";
 const VideoSeries = ({ courses }) => {
   const timeToHoursAndMinutes = function (time) {
     let minutes = time*60;
-    console.log(minutes)
     let hours=Math.floor(minutes/60);
     minutes%=60;
     return hours + " hours " + Math.round(minutes) + " minutes";
@@ -14,14 +13,14 @@ const VideoSeries = ({ courses }) => {
     <div className="flex items-center justify-center mt-14">
       <div className="w-[89%] md:w-[95%] flex flex-col">
         <div className="heading border-b-2 w-[100%] pb-3">
-          <h2 className="text-[1.4rem]">
+          <h2 className="text-[1.1rem] font-medium">
             Video Series {`(${courses.length})`}
           </h2>
         </div>
         <div className="courses flex flex-wrap justify-between xl:justify-normal">
           {courses.map((course, index) => (
             <div
-              className="course flex flex-col w-[100%] md:w-[45%] xl:w-[30%] border-b-2 xl:mr-10 md:p-5 py-5 pr-5 hover:bg-slate-100 rounded-lg mb-5"
+              className="course flex flex-col w-[100%] md:w-[45%] xl:w-[30%] border-b-[1px] xl:mr-10 md:p-5 py-5 pr-5 hover:bg-slate-100 rounded-lg mb-5"
               key={index}
             >
               <div className=" bhaagNum inline-flex items-center mb-3">
